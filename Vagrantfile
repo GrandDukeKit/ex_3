@@ -4,7 +4,7 @@
 MACHINES = {
   :otuslinux => {
         :box_name => "centos/7",
-        :ip_addr => '192.168.11.101',
+        :ip_addr => '192.168.56.1',
 	:disks => {
 		:sata1 => {
 			:dfile => './sata1.vdi',
@@ -25,14 +25,19 @@ MACHINES = {
                         :dfile => './sata4.vdi',
                         :size => 250, # Megabytes
                         :port => 4
-                }
+                },
+		:sata5 => {
+			:dfile => './sata5.vdi',
+			:size => 250,
+			:port => 5
+		}
 
 	}
 
 		
   },
 }
-
+ENV['VAGRANT_SERVER_URL'] = 'https://vagrant.elab.pro'
 Vagrant.configure("2") do |config|
 
   MACHINES.each do |boxname, boxconfig|
