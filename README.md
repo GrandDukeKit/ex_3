@@ -7,7 +7,7 @@
 ##### создать GPT раздел и 5 партиций.
 ## Сдать:
 ##### измененный Vagrantfile - присутствует в данном репозитории
-##### скрипт для создания рейда - 
+## Cкрипт для создания рейда - 
 ##### sudo lshw -short | grep disk
 ##### mdadm --zero-superblock --froce /dev/sd{b,c,d,e,a}
 ##### mdadm --create --verbose /dev/md0 -l 6 -n 5 /dev/sd{b,c,d,e,a}
